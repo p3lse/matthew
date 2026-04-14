@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clients | Matt</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+    body { background-color: #000; color: #fff; padding: 12rem 4rem 4rem 4rem; overflow-x: hidden; }
+    
+    nav { position: fixed; top: 0; left: 0; width: 100%; padding: 3rem 4rem; display: flex; justify-content: space-between; text-transform: uppercase; font-size: 12px; font-weight: bold; background: #000; z-index: 100; letter-spacing: 1px; }
+    nav a { color: #fff; text-decoration: none; margin-left: 3rem; transition: all 0.4s ease; }
+    nav a:hover { opacity: 0.5; }
+    nav a.active { opacity: 0.3; pointer-events: none; }
+    
+    .page-title { font-size: clamp(2.5rem, 8vw, 8rem); font-weight: 900; letter-spacing: -0.05em; border-bottom: 1px solid #333; padding-bottom: 2rem; margin-bottom: 4rem; text-transform: uppercase; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); cursor: default; }
+    .page-title:hover { transform: translateY(-5px) translateX(10px); }
+    
+    .client-list { display: flex; flex-direction: column; gap: 4rem; }
+    
+    .client-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 3rem; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .client-row:hover { padding-left: 2rem; padding-right: 1rem; border-bottom-color: #555; background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, transparent 100%); }
+    
+    .client-profile-group { display: flex; align-items: center; gap: 3rem; }
+
+    .client-logo { width: 120px; height: 120px; object-fit: cover; filter: grayscale(100%); border: 1px solid #333; transition: transform 0.6s ease, filter 0.6s ease; }
+    .client-row:hover .client-logo { transform: scale(1.08); filter: grayscale(50%) brightness(1.2); }
+    
+    .client-info h2 { font-size: clamp(2rem, 4vw, 4rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; text-transform: uppercase; transition: color 0.4s ease; }
+    .client-row:hover .client-info h2 { color: #e0e0e0; }
+    
+    .client-info p { font-size: clamp(1rem, 1.5vw, 1.2rem); color: #888; max-width: 600px; line-height: 1.5; transition: color 0.4s ease; }
+    .client-row:hover .client-info p { color: #fff; }
+    
+    /* Updated Client Meta container and links for icons + text */
+    .client-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .client-meta a { color: #fff; text-decoration: none; transition: opacity 0.3s; white-space: nowrap; display: inline-flex; align-items: center; }
+    .client-meta a:hover { opacity: 0.5; }
+    
+    /* Text link specific styling (View Tracker & Interested) */
+    .text-link { font-size: 1.1rem; border-bottom: 1px solid #fff; padding-bottom: 2px; text-transform: uppercase; font-weight: bold; }
+    
+    /* Icon link specific styling */
+    .icon-link svg { width: 24px; height: 24px; fill: #fff; }
+    
+    .fade-in { animation: fadeIn 1s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body class="fade-in">
+
+<nav>
+    <div class="nav-left">Matt&reg;</div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="clients.html" class="active">Clients</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<h1 class="page-title">My Clients</h1>
+
+<div class="client-list">
+    
+    <div class="client-row">
+        <div class="client-profile-group">
+            <img src="https://pbs.twimg.com/profile_images/1980165935546658816/XLO4E2nh_400x400.jpg" alt="Spirit Logo" class="client-logo">
+            <div class="client-info">
+                <h2>Spirit</h2>
+                <p>A competitive Fortnite professional with over 37,000 Power Ranking (PR) and $500 AUD in tournament earnings.</p>
+            </div>
+        </div>
+        <div class="client-meta">
+            <a href="https://x.com/spirittfnt" target="_blank" class="icon-link" aria-label="X Profile">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4LXDcQdDKoXauY4By6nHyA" target="_blank" class="icon-link" aria-label="YouTube Channel">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://fortnitetracker.com/profile/all/armr%20spirit%C7%83/events" target="_blank" class="text-link">View Tracker &#8599;</a>
+            <a href="contact.html" class="text-link">Interested? &#8594;</a>
+        </div>
+    </div>
+
+    <div class="client-row">
+        <div class="client-profile-group">
+            <img src="https://pbs.twimg.com/profile_images/2035487711373774848/8EXUiDhB_400x400.jpg" alt="Lachlan Logo" class="client-logo">
+            <div class="client-info">
+                <h2>Lachlan</h2>
+                <p>A 15-year-old web developer specializing in building custom, high-performance websites and digital experiences.</p>
+            </div>
+        </div>
+        <div class="client-meta">
+            <a href="https://x.com/Lachlanfv" target="_blank" class="icon-link" aria-label="X Profile">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="contact.html" class="text-link">Interested? &#8594;</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
