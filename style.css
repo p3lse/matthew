@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+body { background-color: #000; color: #fff; overflow-x: hidden; font-weight: 400; }
+
+nav { position: fixed; top: 0; left: 0; width: 100%; padding: 2.5rem 4rem; display: flex; justify-content: space-between; z-index: 999; font-size: 14px; font-weight: 500; mix-blend-mode: difference; }
+nav a { color: #fff; text-decoration: none; margin-left: 3rem; transition: opacity 0.3s ease; }
+nav a:hover { opacity: 0.5; }
+.nav-left { color: #fff; }
+
+.page-transition { animation: fadeIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+.hero-title { font-size: 22vw; font-weight: 900; letter-spacing: -0.06em; line-height: 0.8; mix-blend-mode: difference; color: #fff; }
+.hero-wrapper { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; width: 100%; }
+
+.page-container { padding: 12rem 4rem 4rem 4rem; max-width: 1400px; margin: 0 auto; min-height: 100vh; }
+.page-title { font-size: 8vw; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 4rem; line-height: 1; }
